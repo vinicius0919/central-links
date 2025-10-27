@@ -59,7 +59,7 @@ function App() {
       descricao:
         "Pagina web simples que faz o consumo de uma API publica do anime 'Dragon Ball' para exibir informaçoes sobre personagens, episodios e filmes da franquia. Feito com HTML, CSS e JavaScript.",
       link: "https://vinicius0919.github.io/DBCLUB/",
-    }
+    },
   ];
 
   const redesSociais = [
@@ -103,7 +103,6 @@ function App() {
               <div className="flex items-center justify-between mb-2">
                 <div className="fixed right-0 top-0 h-full w-80 bg-neutral-900 border-l border-white/10 p-6">
                   <div className="flex items-center gap-2">
-
                     <button
                       className="ml-auto p-2 rounded-lg"
                       onClick={() => setOpen(false)}
@@ -130,6 +129,7 @@ function App() {
         )}
       </header>
       {/* Cabeçalho */}
+      <h1 className="text-4xl font-bold text-center mt-8 hover:text-emerald-500 transition-all duration-300">Central-Links</h1>
       <motion.section
         id="start"
         ref={refSobre}
@@ -138,23 +138,14 @@ function App() {
         transition={{ duration: 1.5 }}
         className="flex p-4 flex-col items-center justify-center mt-5 gap-2"
       >
-        <h1 className="text-4xl font-bold">Central-Links</h1>
         <h2 className="text-2xl text-center font-semibold">
           Bem-vindo à minha central de links
         </h2>
         <p>Se você não me conhece, muito prazer, eu sou...</p>
-      </motion.section>
-
-      {/* Foto */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5, delay: 1 }}
-      >
         <img
           src="https://media.licdn.com/dms/image/v2/D4D35AQGsz5gfoqi_3Q/profile-framedphoto-shrink_200_200/B4DZmlqUiVIEAc-/0/1759420959270?e=1762189200&v=beta&t=wcWp3Zm958m1zPJII72OctDNWlWEXNqT1RcesnONFJY"
           alt="Minha Foto"
-          className="rounded-full w-48 h-48 mx-auto mt-5 border-4 border-gray-800"
+          className="rounded-full w-48 h-48 mx-auto mt-5 border-4 border-neutral-900 hover:scale-110 hover:shadow-2xl hover:shadow-emerald-800/40 transition-all duration-300"
         />
       </motion.section>
 
@@ -167,8 +158,8 @@ function App() {
           Vinicius Lima
         </h2>
         <p className="text-center">
-          Bacharel em Sistemas de Informação pela UFRA (Universidade Federal
-          Rural da Amazônia) e Desenvolvedor Web.
+          Bacharel em Sistemas de Informação pela <span className="text-emerald-500 font-semibold">UFRA</span> (Universidade Federal
+          Rural da Amazônia) e <span className="text-emerald-500 font-semibold">Desenvolvedor Web</span>.
         </p>
 
         {/* Tecnologias */}
@@ -178,7 +169,7 @@ function App() {
           animate={
             isInViewTecnologias ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
           }
-          transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
+          transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
           className="grid grid-cols-1 md:grid-cols-2 gap-2 list-none text-center"
         >
           <h3 className="md:col-span-2 text-xl text-center font-semibold">
@@ -189,7 +180,7 @@ function App() {
               key={index}
               className="flex items-center gap-8 w-40 mx-auto p-2 border 
                 border-gray-300 rounded-4xl bg-neutral-900 hover:bg-neutral-800 
-                hover:scale-110 hover:text-emerald-500 transition-all duration-300 cursor-pointer"
+                hover:scale-110 hover:text-emerald-500 hover:animate-bounce transition-all duration-300 cursor-pointer"
             >
               <FileCode size={16} />
               {tech.nome}
@@ -204,7 +195,7 @@ function App() {
         ref={refProjetos}
         initial={{ opacity: 0, y: 100 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
-        transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
+        transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
         className="grid p-4 grid-cols-1 lg:grid-cols-2 gap-4 mt-10 text-center"
       >
         <h2 className="lg:col-span-2 text-2xl font-semibold text-center">
@@ -227,7 +218,11 @@ function App() {
               )}
             </div>
             <p className="text-sm">{projeto.descricao}</p>
-            <a href={`${projeto.link}`} target="_blank" className="text-emerald-500 hover:underline">
+            <a
+              href={`${projeto.link}`}
+              target="_blank"
+              className="text-emerald-500 hover:underline"
+            >
               Acessar
             </a>
           </div>
