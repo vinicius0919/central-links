@@ -101,7 +101,7 @@ function App() {
           <div className="md:hidden">
             <div className="fixed bg-black/60" onClick={() => setOpen(false)}>
               <div className="flex items-center justify-between mb-2">
-                <div className="fixed right-0 top-0 h-full w-80 bg-slate-900 border-l border-white/10 p-6">
+                <div className="fixed right-0 top-0 h-full w-80 bg-neutral-900 border-l border-white/10 p-6">
                   <div className="flex items-center gap-2">
 
                     <button
@@ -111,7 +111,7 @@ function App() {
                       <X className="size-5p" />
                     </button>
                   </div>
-                  <div className="flex flex-col gap-4 bg-slate-900 p-4 w-90">
+                  <div className="flex flex-col gap-4 bg-neutral-900 p-4 w-90">
                     {navLinks.map((link) => (
                       <a
                         key={link.href}
