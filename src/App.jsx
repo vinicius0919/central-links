@@ -91,7 +91,7 @@ function App() {
             ))}
           </nav>
           <button
-            className="md:hidden p-2 rounded-lg"
+            className="md:hidden p-2 rounded-lg ml-auto"
             onClick={() => setOpen(!open)}
           >
             <Menu className="size-5p" />
@@ -103,8 +103,6 @@ function App() {
               <div className="flex items-center justify-between mb-2">
                 <div className="fixed right-0 top-0 h-full w-80 bg-slate-900 border-l border-white/10 p-6">
                   <div className="flex items-center gap-2">
-                    <Sparkles className="size-6 text-fuchsia-400" />
-                    <span className="font-semibold">Minha Marca</span>
 
                     <button
                       className="ml-auto p-2 rounded-lg"
