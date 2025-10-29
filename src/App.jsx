@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const navLinks = [
   { label: "Inicio", href: "#start" },
-  { label: "Sobre", href: "#about" },
+  { label: "Tecnologias", href: "#tecnolog" },
   { label: "Projetos", href: "#projects" },
   { label: "Social", href: "#social" },
 ];
@@ -24,6 +24,7 @@ function App() {
     { nome: "React" },
     { nome: "Node.js" },
     { nome: "Express" },
+    { nome: "Express" },
     { nome: "MongoDB" },
     { nome: "Next.js" },
     { nome: "TypeScript" },
@@ -38,26 +39,26 @@ function App() {
       nome: "Açaitalk",
       img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAALVBMVEVHcEwxIkk6K1o0JVA6KlpMOnAzJU44KlY6K1swIkg+L18wIklBMmQ5KlhgSoRWDPQtAAAACnRSTlMAQbhtWf7734KXOdJHnQAAAIJJREFUKJHNkEEShCAMBCWIYDLw/+duNpQlRLzb3OgaJmTbPs2+v5lIhWuhuI5x/bOUhC6Fni4hAcxcRcS7jNZgqM2uD6k7BjQ6D01oyVx/eI4CiS2nh32r3V94ySNe5sFp5zHJMgfP+S+3O55bCKMLfkXh6ls45RRjsfeejnGV+g4/9n0IUmWljWYAAAAASUVORK5CYII=",
       descricao:
-        "O objetivo deste projeto 'e criar um sitema de chat que permita a comunicação entre usuários de forma rápida e eficiente. Algumas funcionalidades sao: criaçao de salas publicas e provadas, envio de mensagens de texto, alterar foto de perfil, pesquisar grupos publicos, etc. ",
+        "O objetivo deste projeto é criar um sitema de chat que permita a comunicação entre usuários de forma rápida e eficiente. Algumas funcionalidades sao: criação de salas publicas e provadas, envio de mensagens de texto, alterar foto de perfil, pesquisar grupos publicos, etc. ",
       link: "https://acaitalk.site",
     },
     {
       nome: "MiniBlog",
       descricao:
-        "Esse projeto trata-se de um blog minimalista para compartilhamento de textos e ideias. Algumas funcionalidades sao: Publicacao, edição e exclusão de posts e busca por tags.",
+        "Esse projeto trata-se de um blog minimalista para compartilhamento de textos e ideias. Algumas funcionalidades sao: Publicação, edição e exclusão de posts e busca por tags.",
       link: "https://miniblog-lac.vercel.app/",
     },
     {
       nome: "QRCodeMaker",
       descricao:
-        "App web simples feito atraves de JavaScript puro. O objetivo deste projeto 'e gerar codigos QR de forma rapida e eficiente. Permite criar QR Codes personalizados de textos, Wi-Fi, URLs, etc.",
+        "App web simples feito atraves de JavaScript puro. O objetivo deste projeto é gerar codigos QR de forma rapida e eficiente. Permite criar QR Codes personalizados de textos, Wi-Fi, URLs, etc.",
       link: "https://qrcodemaker-mu.vercel.app/",
     },
     ,
     {
       nome: "DBClub",
       descricao:
-        "Pagina web simples que faz o consumo de uma API publica do anime 'Dragon Ball' para exibir informaçoes sobre personagens, episodios e filmes da franquia. Feito com HTML, CSS e JavaScript.",
+        'Pagina web simples que faz o consumo de uma API publica do anime "Dragon Ball" para exibir informaçoes sobre personagens populares da obra. Feito com HTML, CSS e JavaScript.',
       link: "https://vinicius0919.github.io/DBCLUB/",
     },
   ];
@@ -138,30 +139,35 @@ function App() {
         className="flex p-4 flex-col items-center justify-center mt-5 gap-2"
       >
         <img
-          src="https://media.licdn.com/dms/image/v2/D4D35AQGsz5gfoqi_3Q/profile-framedphoto-shrink_200_200/B4DZmlqUiVIEAc-/0/1759420959270?e=1762189200&v=beta&t=wcWp3Zm958m1zPJII72OctDNWlWEXNqT1RcesnONFJY"
+          src="https://media.licdn.com/dms/image/v2/D4D03AQHjWewp3tmxqA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1732822719600?e=1763596800&v=beta&t=FEHqtsWlEGtmKklEKBf7hfKKrTMTe6UGbUT1Y2k6bnA"
           alt="Minha Foto"
           className="rounded-full w-48 h-48 mx-auto mt-5 border-4 border-neutral-900 hover:scale-110 hover:shadow-2xl hover:shadow-emerald-800/40 transition-all duration-300"
         />
-  
 
-      {/* Sobre */}
+        {/* Sobre */}
         <h2 className="text-2xl font-semibold text-center text-emerald-600">
           Vinicius Lima
         </h2>
         <p className="text-center">
-          Bacharel em Sistemas de Informação pela <span className="text-emerald-500 font-semibold">UFRA</span> (Universidade Federal
-          Rural da Amazônia) e <span className="text-emerald-500 font-semibold">Desenvolvedor Front-End</span>.
+          Bacharel em Sistemas de Informação pela{" "}
+          <span className="text-emerald-500 font-semibold">UFRA</span>{" "}
+          (Universidade Federal Rural da Amazônia) e{" "}
+          <span className="text-emerald-500 font-semibold">
+            Desenvolvedor Front-End
+          </span>
+          .
         </p>
 
         {/* Tecnologias */}
         <motion.ul
+          id="tecnolog"
           ref={refTecnologias}
           initial={{ opacity: 0, y: 100 }}
           animate={
             isInViewTecnologias ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
           }
           transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-          className="grid grid-cols-1 w-full px-16 md:grid-cols-2 gap-2 list-none"
+          className="grid grid-cols-1 w-full md:w-4xl px-16 md:grid-cols-2 gap-2 list-none"
         >
           <h3 className="md:col-span-2 text-xl text-center font-semibold">
             Principais tecnologias
@@ -169,18 +175,16 @@ function App() {
           {tecnologias.map((tech, index) => (
             <li
               key={index}
-              className="flex items-center justify-center gap-8 w-full max-w-[300px] md:w-40 mx-auto px-6 py-2 border 
+              className="flex items-center justify-center gap-8 w-full max-w-[300px] md:min-w-48 mx-auto px-6 py-4 border 
                 border-gray-300 rounded-4xl bg-neutral-900 hover:bg-neutral-800 
                 hover:scale-110 hover:text-emerald-500 hover:animate-bounce transition-all duration-300 cursor-pointer"
             >
               <FileCode size={16} className="mr-auto" />
-              <p className="absolute" >
-              {tech.nome}
-              </p>
+              <p className="absolute">{tech.nome}</p>
             </li>
           ))}
         </motion.ul>
-     </motion.section>
+      </motion.section>
 
       {/* Projetos */}
       <motion.section
@@ -189,7 +193,7 @@ function App() {
         initial={{ opacity: 0, y: 100 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
         transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-        className="grid p-4 grid-cols-1 lg:grid-cols-2 gap-4 mt-10 text-center"
+        className="grid px-8 md:px-16 grid-cols-1 lg:grid-cols-2 gap-4 mt-10 text-center"
       >
         <h2 className="lg:col-span-2 text-2xl font-semibold text-center">
           Projetos
@@ -210,7 +214,7 @@ function App() {
                 />
               )}
             </div>
-            <p className="text-sm">{projeto.descricao}</p>
+            <p className="text-md text-justify">{projeto.descricao}</p>
             <a
               href={`${projeto.link}`}
               target="_blank"
