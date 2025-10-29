@@ -129,7 +129,6 @@ function App() {
         )}
       </header>
       {/* Cabeçalho */}
-      <h1 className="text-4xl font-bold text-center mt-8 hover:text-emerald-500 transition-all duration-300">Central-Links</h1>
       <motion.section
         id="start"
         ref={refSobre}
@@ -138,28 +137,20 @@ function App() {
         transition={{ duration: 1.5 }}
         className="flex p-4 flex-col items-center justify-center mt-5 gap-2"
       >
-        <h2 className="text-2xl text-center font-semibold">
-          Bem-vindo à minha central de links
-        </h2>
-        <p>Se você não me conhece, muito prazer, eu sou...</p>
         <img
           src="https://media.licdn.com/dms/image/v2/D4D35AQGsz5gfoqi_3Q/profile-framedphoto-shrink_200_200/B4DZmlqUiVIEAc-/0/1759420959270?e=1762189200&v=beta&t=wcWp3Zm958m1zPJII72OctDNWlWEXNqT1RcesnONFJY"
           alt="Minha Foto"
           className="rounded-full w-48 h-48 mx-auto mt-5 border-4 border-neutral-900 hover:scale-110 hover:shadow-2xl hover:shadow-emerald-800/40 transition-all duration-300"
         />
-      </motion.section>
+  
 
       {/* Sobre */}
-      <section
-        id="about"
-        className="flex p-4 flex-col justify-center m-auto gap-6"
-      >
         <h2 className="text-2xl font-semibold text-center text-emerald-600">
           Vinicius Lima
         </h2>
         <p className="text-center">
           Bacharel em Sistemas de Informação pela <span className="text-emerald-500 font-semibold">UFRA</span> (Universidade Federal
-          Rural da Amazônia) e <span className="text-emerald-500 font-semibold">Desenvolvedor Web</span>.
+          Rural da Amazônia) e <span className="text-emerald-500 font-semibold">Desenvolvedor Front-End</span>.
         </p>
 
         {/* Tecnologias */}
@@ -170,7 +161,7 @@ function App() {
             isInViewTecnologias ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }
           }
           transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-2 list-none text-center"
+          className="grid grid-cols-1 w-full px-16 md:grid-cols-2 gap-2 list-none"
         >
           <h3 className="md:col-span-2 text-xl text-center font-semibold">
             Principais tecnologias
@@ -178,16 +169,18 @@ function App() {
           {tecnologias.map((tech, index) => (
             <li
               key={index}
-              className="flex items-center gap-8 w-40 mx-auto p-2 border 
+              className="flex items-center justify-center gap-8 w-full max-w-[300px] md:w-40 mx-auto px-6 py-2 border 
                 border-gray-300 rounded-4xl bg-neutral-900 hover:bg-neutral-800 
                 hover:scale-110 hover:text-emerald-500 hover:animate-bounce transition-all duration-300 cursor-pointer"
             >
-              <FileCode size={16} />
+              <FileCode size={16} className="mr-auto" />
+              <p className="absolute" >
               {tech.nome}
+              </p>
             </li>
           ))}
         </motion.ul>
-      </section>
+     </motion.section>
 
       {/* Projetos */}
       <motion.section
