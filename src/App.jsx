@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const navLinks = [
   { label: "Inicio", href: "#start" },
-  { label: "Tecnologias", href: "#tecnolog" },
+  { label: "Tecnologias", href: "#technology" },
   { label: "Projetos", href: "#projects" },
   { label: "Social", href: "#social" },
 ];
@@ -160,7 +160,7 @@ function App() {
 
         {/* Tecnologias */}
         <motion.ul
-          id="tecnolog"
+          id="technology"
           ref={refTecnologias}
           initial={{ opacity: 0, y: 100 }}
           animate={
