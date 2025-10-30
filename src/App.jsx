@@ -21,16 +21,20 @@ function App() {
   const isInViewSobre = useInView(refSobre);
   const tecnologias = [
     { nome: "JavaScript" },
-    { nome: "React" },
+    { nome: "TypeScript" },
+    { nome: "Java" },
+    { nome: "Python" },
     { nome: "Node.js" },
+    { nome: "React" },
+    { nome: "JWT" },
+    { nome: "Next.js" },
     { nome: "Express" },
     { nome: "Express" },
     { nome: "MongoDB" },
-    { nome: "Next.js" },
-    { nome: "TypeScript" },
+    { nome: "MySQL" },
+    { nome: "Firebase" },
     { nome: "Prisma" },
     { nome: "Bootstrap" },
-    { nome: "JWT" },
     { nome: "Tailwind CSS" },
   ];
 
@@ -39,7 +43,7 @@ function App() {
       nome: "Açaitalk",
       img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAALVBMVEVHcEwxIkk6K1o0JVA6KlpMOnAzJU44KlY6K1swIkg+L18wIklBMmQ5KlhgSoRWDPQtAAAACnRSTlMAQbhtWf7734KXOdJHnQAAAIJJREFUKJHNkEEShCAMBCWIYDLw/+duNpQlRLzb3OgaJmTbPs2+v5lIhWuhuI5x/bOUhC6Fni4hAcxcRcS7jNZgqM2uD6k7BjQ6D01oyVx/eI4CiS2nh32r3V94ySNe5sFp5zHJMgfP+S+3O55bCKMLfkXh6ls45RRjsfeejnGV+g4/9n0IUmWljWYAAAAASUVORK5CYII=",
       descricao:
-        "O objetivo deste projeto é criar um sitema de chat que permita a comunicação entre usuários de forma rápida e eficiente. Algumas funcionalidades sao: criação de salas publicas e provadas, envio de mensagens de texto, alterar foto de perfil, pesquisar grupos publicos, etc. ",
+        "O objetivo deste projeto é criar um sitema de chat que permita a comunicação entre usuários de forma rápida e eficiente. Algumas funcionalidades são: criação de salas publicas e provadas, envio de mensagens de texto, alterar foto de perfil, pesquisar grupos publicos, etc. ",
       link: "https://acaitalk.site",
     },
     {
@@ -54,7 +58,12 @@ function App() {
         "App web simples feito atraves de JavaScript puro. O objetivo deste projeto é gerar codigos QR de forma rapida e eficiente. Permite criar QR Codes personalizados de textos, Wi-Fi, URLs, etc.",
       link: "https://qrcodemaker-mu.vercel.app/",
     },
-    ,
+    {
+      nome: "Renamer",
+      descricao:
+        "Renomeador é uma ferramenta simples projetada para automatizar o processo de renomeação de arquivos em massa. Ele ajuda os usuários a organizar e gerenciar com eficiência os nomes de arquivos de acordo com regras ou padrões personalizáveis.",
+      link: "https://github.com/vinicius0919/renamer",
+    },
     {
       nome: "DBClub",
       descricao:
