@@ -75,12 +75,12 @@ function App() {
   const redesSociais = [
     {
       nome: "Instagram",
-      icone: <FaInstagramSquare size={24} />,
+      icone: <FaInstagramSquare size={36} />,
       link: "https://www.instagram.com/vinicciusgtr/",
     },
     {
       nome: "LinkedIn",
-      icone: <FaLinkedin size={24} />,
+      icone: <FaLinkedin size={36} />,
       link: "https://www.linkedin.com/in/vinícius-lima-224785212/",
     },
   ];
