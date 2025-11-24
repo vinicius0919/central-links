@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { FileCode, Menu, X } from "lucide-react";
+import perfil from "./assets/perfil.jpeg";
 import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { useRef } from "react";
 import { useState } from "react";
@@ -148,7 +149,7 @@ function App() {
         className="flex p-4 flex-col items-center justify-center mt-5 gap-2"
       >
         <img
-          src="https://media.licdn.com/dms/image/v2/D4D03AQHjWewp3tmxqA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1732822719600?e=1763596800&v=beta&t=FEHqtsWlEGtmKklEKBf7hfKKrTMTe6UGbUT1Y2k6bnA"
+          src={perfil}
           alt="Minha Foto"
           className="rounded-full w-48 h-48 mx-auto mt-5 border-4 border-neutral-900 hover:scale-110 hover:shadow-2xl hover:shadow-emerald-800/40 transition-all duration-300"
         />
